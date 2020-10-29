@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!-- hierachrical definition of a character -->
+<doc>
+    <node type="free" name="root">
+    	<geom type="box" name="torso" center="0 0 0" scale="0.7 1.0 0.6"  color="0.0 0.75 1.0">
+    		<node type="rotary" name="Neck Rotation" position="0 0.3 0" axis="0 1 0" min="-90" max="90">
+    			<geom type="box" name="Neck" center="0 0.3 0" color="0.0 0.6 0.8"
+    				scale="0.2 0.1 0.2">
+    				<node type="spherical" name="Head Rotation" min="-90 0 -90" max="90 90 90" position="0 1.0 0">
+    					<geom type="sphere" name="Head" center="0 1.0 0" color="0 0.75 1"
+    						scale="2.0 2.5 2.0">
+    					<geom type="sphere" name="eye1" scale="0.2 0.2 0.2" color="0 0 0"
+    						center="-0.4 0 1.0">
+    					</geom>
+    					<geom type="sphere" name="eye2" scale="0.2 0.2 0.2 " color="0 0 0"
+    						center="0.4 0 1.0">
+    					</geom></geom></node>
+    			</geom></node>
+    		<node type="spherical" position=" 0.6 0.3 0" name="Left Shoulder Joint" min="-180 -90 -180" max="180 90 180">
+    			<geom type="box" name="Left Upper Arm" scale="0.3 0.6 0.2" color="0.0 0.6 0.8" center="0.1 -0.1 0">
+    				<node type="spherical" name="Left Elbow" position="0 -1 0.1" min="-180 0 -180" max="0 0 180">
+    					<geom type="box" name="Left Lower Arm" scale="1 1 1" color="0.0 0.75 1.0"
+    						center="0 0 0">
+    					</geom></node></geom></node>
+    		<node type="spherical" name="Right Shoulder" position="-0.6 0.3 0" max="180 90 180" min="-180 -90 -180">
+    			<geom type="box" name="Right Upper Arm" scale="0.3 0.6 0.2" color="0 0.6 0.8" center="-0.1 -0.1 0">
+    				<node type="spherical" name="Right Elbow" position="0 -1 0.1" min="-180 0 -180" max="0 0 180">
+    					<geom type="box" name="Right Lower Arm" scale="1 1 1" color="0.0 0.75 1.0"
+    						center="0 0 0">
+    					</geom></node></geom></node>
+    		<node type="rotary" name="Hip Joint" position="0 -0.63 0" axis="0 1 0" min="-90" max="90">
+    			<geom type="box" name="Hip" scale="1 0.3 0.6" color="0.0 0.6 0.0" center="0 0 0 ">
+    				<node type="spherical" name="Upper Left Leg Joint" position="0.3 -1.7 0.1" min="-90 -90 -90" max="0 90 90">
+    					<geom type="box" name="Upper Left Leg" scale="0.4 2.5 0.4" color="0.0 0.6 0.0"
+    						center="0.1 -0.1 0 ">
+    						<node type="spherical" name="Left Knee" position="0 -1 0.1" min="0 -90 -90"
+    							max="90 90 90 ">
+    							<geom type="box" name="Lower Left Leg" scale="1 1 1" color="0 0.69 0.2"
+    								center="0 0 0 ">
+    								<node type="spherical" name="Left Foot Joint" position="0 -0.7 1"
+    									max="10 20 20" min="-10 -20 -20">
+    									<geom type="box" scale="1 0.3 4" name="Left Foot"
+    										color="0.5 0.16 0.16" center="0 0 0">
+    									</geom>
+    								</node>
+    							</geom>
+    						</node>
+    					</geom></node>
+    				<node type="spherical" name="Upper Right Leg Joint" position="-0.3 -1.7 0.1" min="-90 -90 -90" max="0 90 90">
+    					<geom type="box" name="Upper Right Leg" scale="0.4 2.5 0.4" color="0.0 0.6 0.0"
+    						center="-0.1 -0.1 0 ">
+    						<node type="spherical" name="Right Knee" position="0 -1 0.1" min="0 -90 -90"
+    							max="90 90 90 ">
+    							<geom type="box" name="Lower Right Leg" scale="1 1 1" color="0 0.69 0.2"
+    								center="0 0 0 ">
+    								<node type="spherical" name="RIght Foot Joint" position="0 -0.7 1"
+    									max="10 20 20" min="-10 -20 -20">
+    									<geom type="box" scale="1 0.3 4" name="RIght Foot"
+    										color="0.5 0.16 0.16" center="0 0 0">
+    									</geom>
+    								</node>
+    							</geom>
+    						</node>
+    					</geom></node>
+    		</geom></node></geom>
+	</node>
+</doc>
